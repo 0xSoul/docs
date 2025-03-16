@@ -32,35 +32,35 @@
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.5; /* Reduced opacity for documentation focus */
+  opacity: 0.7; /* Increased opacity from 0.5 to 0.7 for more visibility */
 }
 
 .floatingOrb {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 180px; /* Increased size from 150px */
+  height: 180px; /* Increased size from 150px */
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, var(--ifm-color-primary-lightest) 0%, transparent 70%);
-  opacity: 0.3;
+  opacity: 0.4; /* Increased opacity from 0.3 */
   filter: blur(20px);
   animation: pulse 8s infinite ease-in-out;
 }
 
 .floatingRing {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 250px; /* Increased size from 200px */
+  height: 250px; /* Increased size from 200px */
   border-radius: 50%;
-  border: 15px solid var(--ifm-color-primary-lightest);
-  opacity: 0.15;
+  border: 20px solid var(--ifm-color-primary-lightest); /* Increased border from 15px */
+  opacity: 0.2; /* Increased opacity from 0.15 */
   transform: rotate(-25deg);
   animation: rotateRing 20s infinite linear;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.2); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 0.3; }
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.3); opacity: 0.6; } /* Increased scale and opacity */
+  100% { transform: scale(1); opacity: 0.4; }
 }
 
 @keyframes rotateRing {
@@ -100,16 +100,16 @@
 }
 
 .heroLogo {
-  width: 120px;
-  height: 120px;
-  filter: drop-shadow(0 4px 15px rgba(175, 84, 255, 0.5));
+  width: 140px; /* Increased size from 120px */
+  height: 140px; /* Increased size from 120px */
+  filter: drop-shadow(0 4px 20px rgba(175, 84, 255, 0.7)); /* Increased shadow */
   animation: logoPulse 3s infinite ease-in-out;
 }
 
 @keyframes logoPulse {
-  0% { transform: scale(1); filter: drop-shadow(0 4px 10px rgba(175, 84, 255, 0.3)); }
-  50% { transform: scale(1.1); filter: drop-shadow(0 4px 20px rgba(175, 84, 255, 0.6)); }
-  100% { transform: scale(1); filter: drop-shadow(0 4px 10px rgba(175, 84, 255, 0.3)); }
+  0% { transform: scale(1); filter: drop-shadow(0 4px 15px rgba(175, 84, 255, 0.5)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 4px 25px rgba(175, 84, 255, 0.8)); } /* Enhanced animation */
+  100% { transform: scale(1); filter: drop-shadow(0 4px 15px rgba(175, 84, 255, 0.5)); }
 }
 
 .heroText {
@@ -117,7 +117,7 @@
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Increased from 3rem */
   background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -126,6 +126,7 @@
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin: 0;
+  text-shadow: 0 2px 10px rgba(175, 84, 255, 0.2); /* Added subtle text shadow for depth */
 }
 
 .heroSubtitle {
@@ -636,5 +637,1748 @@
   .featureIcon {
     margin-right: 0;
     margin-bottom: 0.75rem;
+  }
+}
+
+/*===============================================
+  COSMIC DOCUMENTATION ATLAS
+===============================================*/
+.cosmicAtlas {
+  padding: 6rem 0;
+  position: relative;
+  background-color: var(--ifm-color-emphasis-0);
+  overflow: hidden;
+  min-height: 700px;
+}
+
+.cosmicMist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(175, 84, 255, 0.05) 0%,
+    rgba(175, 84, 255, 0.01) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 0;
+}
+
+.galaxyCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.centerGlow {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    var(--ifm-color-primary-lightest) 0%,
+    var(--ifm-color-primary) 50%,
+    transparent 100%
+  );
+  box-shadow: 0 0 30px rgba(175, 84, 255, 0.5);
+  animation: centerPulse 4s infinite ease-in-out;
+}
+
+@keyframes centerPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.innerRing, .middleRing, .outerRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(175, 84, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.innerRing {
+  width: 150px;
+  height: 150px;
+  animation: rotateRingFast 20s infinite linear;
+}
+
+.middleRing {
+  width: 300px;
+  height: 300px;
+  animation: rotateRingSlow 30s infinite linear reverse;
+}
+
+.outerRing {
+  width: 450px;
+  height: 450px;
+  animation: rotateRingVery 40s infinite linear;
+}
+
+@keyframes rotateRingFast {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateRingSlow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateRingVery {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.atlasHeading {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.atlasTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.atlasDescription {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.docPlanets {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.docPlanet {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.docPlanet:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.planet-top-left {
+  top: 0;
+  left: 0;
+}
+
+.planet-top-right {
+  top: 0;
+  right: 0;
+}
+
+.planet-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.planet-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.planet-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.planet-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.planetOrbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.orbitTrack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px dashed rgba(175, 84, 255, 0.3);
+  animation: orbitRotate 20s infinite linear;
+}
+
+.orbitGlow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at center, var(--ifm-color-primary-lighter) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(3px);
+  animation: orbitRotate 20s infinite linear;
+}
+
+@keyframes orbitRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.planetBody {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1), 0 0 15px rgba(175, 84, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
+}
+
+.docPlanet:hover .planetBody {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 25px rgba(175, 84, 255, 0.3);
+}
+
+.planetIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.planetTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.planetDescription {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  display: none;
+}
+
+.docPlanet:hover .planetDescription {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*===============================================
+  COSMIC DISCOVERIES (BENEFITS)
+===============================================*/
+.cosmicDiscoveries {
+  padding: 6rem 0;
+  position: relative;
+  background-color: var(--ifm-color-emphasis-100);
+  overflow: hidden;
+}
+
+.starsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 20% 30%, var(--ifm-color-primary-lightest) 1px, transparent 1px),
+                    radial-gradient(circle at 50% 80%, var(--ifm-color-primary-lighter) 1px, transparent 1px),
+                    radial-gradient(circle at 80% 40%, var(--ifm-color-primary-light) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.meteorShower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, transparent 0%, transparent 40%, rgba(175, 84, 255, 0.08) 45%, transparent 50%, transparent 100%);
+  animation: meteorMove 8s infinite linear;
+  z-index: 0;
+}
+
+@keyframes meteorMove {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+.discoveriesContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.discoveriesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.discoveriesTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.discoveriesTagline {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.discoveriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.discoveryCard {
+  position: relative;
+  background-color: var(--ifm-background-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discoveryCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 15px rgba(175, 84, 255, 0.2);
+}
+
+.discoveryGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(175, 84, 255, 0.2) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.discoveryIcon {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.discoveryTitle {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.discoveryDescription {
+  position: relative;
+  z-index: 1;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+/*===============================================
+  COSMIC VOYAGE (LEARNING PATH)
+===============================================*/
+.cosmicVoyage {
+  padding: 6rem 0;
+  position: relative;
+  background-color: var(--ifm-background-color);
+  overflow: hidden;
+}
+
+.voyagePath {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, 
+    var(--ifm-color-primary-light) 0%, 
+    var(--ifm-color-primary) 30%, 
+    var(--ifm-color-primary-darker) 70%,
+    var(--ifm-color-primary-darkest) 100%
+  );
+  z-index: 0;
+}
+
+.voyageHalo {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(175, 84, 255, 0.5) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(5px);
+  animation: haloMove 15s infinite linear;
+  z-index: 0;
+}
+
+@keyframes haloMove {
+  0% { left: 10%; }
+  100% { left: 90%; }
+}
+
+.voyageTrail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--ifm-color-primary-lightest);
+  box-shadow: 0 0 10px var(--ifm-color-primary-lighter), 0 0 20px var(--ifm-color-primary-lightest);
+  z-index: 1;
+  animation: trailExpand 8s infinite ease-out;
+}
+
+@keyframes trailExpand {
+  0% { width: 0%; opacity: 1; }
+  80% { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+
+.voyageContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.voyageTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.voyageDescription {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+.voyageStages {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.voyageStage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 2rem);
+}
+
+.stageOrbit {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.stagePlanet {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lighter), var(--ifm-color-primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(175, 84, 255, 0.5);
+  z-index: 2;
+}
+
+.stageContent {
+  background-color: var(--ifm-card-background);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.stageDescription {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.stageLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.stageLink:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.stageLinkArrow {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.stageLink:hover .stageLinkArrow {
+  transform: translateX(3px);
+}
+
+/*===============================================
+  COSMIC COMMUNITY
+===============================================*/
+.cosmicCommunity {
+  padding: 6rem 0;
+  position: relative;
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary-darker));
+  overflow: hidden;
+  color: white;
+}
+
+.communityNebula {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.floatingParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+                    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                    radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 150px 150px;
+  opacity: 0.7; /* Increased from 0.5 */
+  z-index: 0;
+  animation: floatingParticles 60s infinite linear;
+}
+
+@keyframes floatingParticles {
+  0% { background-position: 0 0; }
+  100% { background-position: 150px 150px; }
+}
+
+.communityContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.communityVisualization {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galaxySystem {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.galaxyCore {
+  position: absolute;
+  width: 120px; /* Increased from 100px */
+  height: 120px; /* Increased from 100px */
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 1) 0%, rgba(175, 84, 255, 0.8) 50%, transparent 80%); /* Enhanced gradient */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(5px);
+  animation: corePulse 4s infinite ease-in-out;
+}
+
+@keyframes corePulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; filter: blur(7px); } /* Enhanced animation */
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}
+
+.galaxyRing {
+  position: absolute;
+  width: 280px; /* Increased from 240px */
+  height: 280px; /* Increased from 240px */
+  border: 3px solid rgba(255, 255, 255, 0.4); /* Increased from 2px and 0.3 */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: galaxyRingRotate 30s infinite linear;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Added glow */
+}
+
+@keyframes galaxyRingRotate {
+  0% { transform: translate(-50%, -50%) rotate(45deg); }
+  100% { transform: translate(-50%, -50%) rotate(405deg); }
+}
+
+.galaxyStar {
+  position: absolute;
+  width: 20px; /* Increased from 15px */
+  height: 20px; /* Increased from 15px */
+  background: white;
+  border-radius: 50%;
+  filter: blur(3px); /* Increased from 2px */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Enhanced glow from 0.8 */
+}
+
+.galaxyStar:nth-child(3) {
+  top: 50%;
+  left: 10%;
+  animation: starPulse 3s infinite ease-in-out;
+}
+
+.galaxyStar:nth-child(4) {
+  top: 20%;
+  left: 50%;
+  animation: starPulse 2s infinite ease-in-out 0.5s;
+}
+
+.galaxyStar:nth-child(5) {
+  top: 50%;
+  right: 10%;
+  animation: starPulse 4s infinite ease-in-out 1s;
+}
+
+.galaxyStar:nth-child(6) {
+  bottom: 20%;
+  left: 30%;
+  animation: starPulse 3.5s infinite ease-in-out 0.7s;
+}
+
+.galaxyStar:nth-child(7) {
+  bottom: 30%;
+  right: 20%;
+  animation: starPulse 2.5s infinite ease-in-out 1.2s;
+}
+
+@keyframes starPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+.communityContent {
+  flex: 1;
+  text-align: left;
+}
+
+.communityTitle {
+  font-size: 3.2rem; /* Increased from 3rem */
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(175, 84, 255, 0.7); /* Enhanced glow from 0.5 */
+}
+
+.communityDescription {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.communityActions {
+  display: flex;
+  gap: 1rem;
+}
+
+/*===============================================
+  COSMIC PORTAL - MAIN CONTENT
+===============================================*/
+.cosmicPortal {
+  position: relative;
+  min-height: 600px;
+  padding: 6rem 0;
+  overflow: hidden;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.portalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(3px 3px at 20px 30px, var(--ifm-color-primary-lightest), rgba(0,0,0,0)),
+                    radial-gradient(3px 3px at 40px 70px, var(--ifm-color-primary-lighter), rgba(0,0,0,0)),
+                    radial-gradient(3px 3px at 50px 160px, var(--ifm-color-primary-light), rgba(0,0,0,0)),
+                    radial-gradient(3px 3px at 90px 40px, var(--ifm-color-primary-lightest), rgba(0,0,0,0)),
+                    radial-gradient(3px 3px at 130px 80px, var(--ifm-color-primary-lighter), rgba(0,0,0,0)),
+                    radial-gradient(3px 3px at 160px 120px, var(--ifm-color-primary-light), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.5; /* Increased from 0.3 */
+  animation: sparkle 10s infinite linear;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 70%, rgba(175, 84, 255, 0.1) 100%); /* Increased glow from 0.05 */
+  z-index: 1;
+}
+
+.portalGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px; /* Increased from 500px */
+  height: 600px; /* Increased from 500px */
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, rgba(175, 84, 255, 0.3) 0%, transparent 70%); /* Increased opacity from 0.2 */
+  z-index: 2;
+  filter: blur(10px); /* Added blur for more ethereal effect */
+}
+
+.portalContent {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 3;
+}
+
+.portalCenter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Increased z-index from 1 to ensure visibility */
+}
+
+.centerOrb {
+  width: 100px; /* Increased from 80px */
+  height: 100px; /* Increased from 80px */
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--ifm-color-primary-lightest), var(--ifm-color-primary-dark));
+  box-shadow: 0 0 50px 15px rgba(175, 84, 255, 0.6); /* Enhanced glow from 0.4 */
+  margin: 0 auto;
+  animation: orbPulse 4s infinite ease-in-out;
+}
+
+@keyframes orbPulse {
+  0% { transform: scale(1); box-shadow: 0 0 50px 15px rgba(175, 84, 255, 0.6); }
+  50% { transform: scale(1.15); box-shadow: 0 0 70px 20px rgba(175, 84, 255, 0.8); } /* Enhanced animation */
+  100% { transform: scale(1); box-shadow: 0 0 50px 15px rgba(175, 84, 255, 0.6); }
+}
+
+.portalRings {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portalRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid rgba(175, 84, 255, 0.5); /* Increased border width and opacity from 1px and 0.3 */
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(175, 84, 255, 0.3); /* Added glow to rings */
+}
+
+.portalRing:nth-child(1) {
+  width: 160px; /* Increased from 140px */
+  height: 160px; /* Increased from 140px */
+  animation: rotate 15s infinite linear;
+}
+
+.portalRing:nth-child(2) {
+  width: 260px; /* Increased from 220px */
+  height: 260px; /* Increased from 220px */
+  animation: rotate 25s infinite linear reverse;
+}
+
+.portalRing:nth-child(3) {
+  width: 360px; /* Increased from 300px */
+  height: 360px; /* Increased from 300px */
+  animation: rotate 35s infinite linear;
+}
+
+.portalCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 5rem;
+  position: relative;
+  z-index: 4;
+}
+
+.portalCard {
+  position: relative;
+  width: 300px;
+  background: rgba(20, 20, 35, 0.95);
+  backdrop-filter: blur(15px);
+  border: 2px solid var(--product-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px var(--product-color);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: var(--ifm-color-emphasis-900);
+  min-height: 350px;
+}
+
+.portalCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px var(--product-color);
+  text-decoration: none;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: radial-gradient(ellipse at center, var(--product-color) 0%, transparent 70%);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.portalCard:hover .cardGlow {
+  opacity: 0.7;
+}
+
+.cardIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cardDescription {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.cardArrow {
+  font-size: 1.5rem;
+  color: var(--product-color);
+  transition: transform 0.2s ease;
+}
+
+.portalCard:hover .cardArrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .portalCards {
+    padding-top: 370px;
+  }
+  
+  .communityContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  
+  .portalCards {
+    padding-top: 300px;
+  }
+  
+  .communityTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portalCard {
+    width: 100%;
+  }
+  
+  .communityTitle {
+    font-size: 2rem;
+  }
+}
+
+/* ----- Cosmic Background ----- */
+.cosmicBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(4px 4px at 20px 30px, white, rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 40px 70px, var(--ifm-color-primary-lightest), rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 50px 160px, var(--ifm-color-primary-lighter), rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 90px 40px, white, rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 130px 80px, var(--ifm-color-primary-lightest), rgba(0,0,0,0)),
+    radial-gradient(4px 4px at 160px 120px, var(--ifm-color-primary-lighter), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.7;
+  animation: sparkle 400s infinite linear;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-2000px); }
+}
+
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 80%, rgba(175, 84, 255, 0.2) 100%);
+  opacity: 0.8;
+  animation: twinkle 8s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.6; }
+}
+
+.nebula {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 70% 20%, rgba(175, 84, 255, 0.2) 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 70%, rgba(84, 150, 255, 0.2) 0%, transparent 70%);
+  filter: blur(20px);
+  opacity: 0.8;
+}
+
+.floatingOrb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--ifm-color-primary-lightest) 0%, transparent 70%);
+  opacity: 0.6;
+  filter: blur(20px);
+  animation: pulse 10s infinite ease-in-out;
+}
+
+.floatingRing {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 25px solid var(--ifm-color-primary-lightest);
+  opacity: 0.3;
+  transform: rotate(-25deg);
+  filter: blur(5px);
+  animation: rotateRing 30s infinite linear;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(-25deg); }
+  100% { transform: rotate(335deg); }
+}
+
+/* ----- Hero Section ----- */
+.heroSection {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.heroLogo {
+  width: 180px;
+  height: 180px;
+  filter: drop-shadow(0 4px 30px rgba(175, 84, 255, 0.8));
+  animation: logoPulse 5s infinite ease-in-out;
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); filter: drop-shadow(0 4px 20px rgba(175, 84, 255, 0.6)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 4px 35px rgba(175, 84, 255, 0.9)); }
+  100% { transform: scale(1); filter: drop-shadow(0 4px 20px rgba(175, 84, 255, 0.6)); }
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 15px rgba(175, 84, 255, 0.4);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  max-width: 600px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ----- Products Galaxy ----- */
+.productsGalaxy {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, 
+    rgba(20, 20, 30, 0.6) 0%,
+    rgba(25, 20, 40, 0.8) 50%,
+    rgba(20, 20, 30, 0.6) 100%
+  );
+  min-height: auto;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.galaxyCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.centerOrb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, white, var(--ifm-color-primary));
+  box-shadow: 0 0 60px 20px rgba(175, 84, 255, 0.7);
+  animation: centerPulse 5s infinite ease-in-out;
+}
+
+@keyframes centerPulse {
+  0% { transform: scale(1); box-shadow: 0 0 60px 20px rgba(175, 84, 255, 0.7); }
+  50% { transform: scale(1.2); box-shadow: 0 0 80px 30px rgba(175, 84, 255, 0.9); }
+  100% { transform: scale(1); box-shadow: 0 0 60px 20px rgba(175, 84, 255, 0.7); }
+}
+
+.galaxyRings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.galaxyRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid rgba(175, 84, 255, 0.6);
+  box-shadow: 0 0 20px rgba(175, 84, 255, 0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.galaxyRing:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  animation: rotateRingInner 25s infinite linear;
+}
+
+.galaxyRing:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  animation: rotateRingMiddle 40s infinite linear reverse;
+}
+
+.galaxyRing:nth-child(3) {
+  width: 700px;
+  height: 700px;
+  animation: rotateRingOuter 60s infinite linear;
+}
+
+@keyframes rotateRingInner {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateRingMiddle {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateRingOuter {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.productsContainer {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 30px;
+  z-index: 2;
+}
+
+.productPlanet {
+  position: relative;
+  transition: transform 0.4s ease, z-index 0.1s;
+  z-index: 2;
+}
+
+.productPlanet:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Position each product in the grid */
+.planet-top-left {
+  grid-column: 1 / span 5;
+  grid-row: 1;
+}
+
+.planet-top-right {
+  grid-column: 8 / span 5;
+  grid-row: 1;
+}
+
+.planet-center {
+  grid-column: 4 / span 6;
+  grid-row: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.planet-bottom-left {
+  grid-column: 1 / span 5;
+  grid-row: 3;
+}
+
+.planet-bottom-right {
+  grid-column: 8 / span 5;
+  grid-row: 3;
+}
+
+.orbitPath {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  border-radius: 50%;
+  border: 2px dashed rgba(175, 84, 255, 0.3);
+  animation: orbitRotate 60s infinite linear;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.productPlanet:hover .orbitPath {
+  opacity: 0.7;
+}
+
+@keyframes orbitRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.productCard {
+  position: relative;
+  background: rgba(20, 20, 35, 0.95);
+  backdrop-filter: blur(15px);
+  border: 2px solid var(--product-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px var(--product-color);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  min-height: 350px;
+}
+
+.productPlanet:hover .productCard {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px var(--product-color);
+  border-color: white;
+  transform: translateY(-10px);
+}
+
+.productGlow {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: radial-gradient(ellipse at center, var(--product-color) 0%, transparent 70%);
+  opacity: 0.4;
+  filter: blur(10px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.productPlanet:hover .productGlow {
+  opacity: 0.7;
+}
+
+.productIcon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+}
+
+.productTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.productDescription {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--product-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: gap 0.3s ease;
+  margin-top: auto;
+}
+
+.productLink:hover {
+  gap: 0.75rem;
+  text-decoration: none;
+  color: white;
+}
+
+.productLinkArrow {
+  transition: transform 0.3s ease;
+}
+
+.productLink:hover .productLinkArrow {
+  transform: translateX(3px);
+}
+
+/* Responsive styles for products section */
+@media (max-width: 1199px) {
+  .productsContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .planet-top-left, 
+  .planet-bottom-left {
+    grid-column: 1;
+  }
+  
+  .planet-top-right, 
+  .planet-bottom-right {
+    grid-column: 2;
+  }
+  
+  .planet-center {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin: 30px auto;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsContainer {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  
+  .planet-top-left,
+  .planet-top-right,
+  .planet-bottom-left,
+  .planet-bottom-right,
+  .planet-center {
+    grid-column: 1;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .planet-top-left { grid-row: 1; }
+  .planet-top-right { grid-row: 2; }
+  .planet-center { grid-row: 3; }
+  .planet-bottom-left { grid-row: 4; }
+  .planet-bottom-right { grid-row: 5; }
+  
+  .productIcon {
+    font-size: 4rem;
+  }
+  
+  .productTitle {
+    font-size: 1.75rem;
+  }
+}
+
+/* ----- Cosmic Journey ----- */
+.cosmicJourney {
+  position: relative;
+  padding: 8rem 0;
+  background: linear-gradient(135deg, 
+    rgba(30, 20, 50, 0.95) 0%, 
+    rgba(50, 30, 90, 0.95) 50%, 
+    rgba(30, 20, 50, 0.95) 100%
+  );
+  overflow: hidden;
+  margin-top: -2px; /* Ensure seamless connection with previous section */
+  border-top: 2px solid rgba(175, 84, 255, 0.5);
+  box-shadow: 0 -10px 30px rgba(175, 84, 255, 0.3);
+}
+
+.journeyStarfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.7;
+  z-index: 0;
+  animation: slowTwinkle 4s infinite alternate ease-in-out;
+}
+
+@keyframes slowTwinkle {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+.journeyGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 70% 20%, rgba(175, 84, 255, 0.4) 0%, transparent 60%),
+    radial-gradient(circle at 30% 80%, rgba(120, 100, 255, 0.3) 0%, transparent 60%);
+  z-index: 0;
+  filter: blur(40px);
+}
+
+/* Cosmic pathway effect */
+.journeyPath {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: radial-gradient(ellipse at center bottom, rgba(175, 84, 255, 0.4) 0%, transparent 70%);
+  z-index: 0;
+  filter: blur(30px);
+}
+
+/* Floating elements */
+.journeyElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.journeyOrb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(175, 84, 255, 0.3));
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.journeyOrb:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation: floatOrb 15s infinite ease-in-out;
+}
+
+.journeyOrb:nth-child(2) {
+  bottom: 30%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  animation: floatOrb 12s infinite ease-in-out reverse;
+  animation-delay: 2s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-30px) translateX(20px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+.journeyContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journeyTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(175, 84, 255, 0.8);
+  position: relative;
+}
+
+.journeyTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.journeyDescription {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.journeyActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.journeyActions a {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.journeyActions a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(175, 84, 255, 0.4);
+}
+
+.journeyActions a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.journeyActions a:hover::before {
+  left: 100%;
+}
+
+/* Primary button specific styles */
+.journeyActions a.button--primary {
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border-color: var(--ifm-color-primary);
+}
+
+.journeyActions a.button--secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .journeyTitle {
+    font-size: 2.5rem;
+  }
+  
+  .journeyDescription {
+    font-size: 1.2rem;
+  }
+  
+  .journeyOrb {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .journeyTitle {
+    font-size: 2rem;
+  }
+  
+  .journeyActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .journeyActions a {
+    width: 100%;
+  }
+}
+
+/* Shooting stars */
+.shootingStar {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(240, 240, 255, 0));
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  animation: shootingStarAnim 6s linear infinite;
+  z-index: 0;
+  opacity: 0;
+}
+
+@keyframes shootingStarAnim {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(400px) translateY(400px) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(400px) translateY(400px) rotate(-45deg);
+    opacity: 0;
   }
 }
