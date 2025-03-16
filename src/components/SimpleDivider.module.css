@@ -1,0 +1,26 @@
+.dividerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.dividerLine {
+  height: 1px;
+  background: #e5e5e5;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.dividerIcon {
+  margin: 0 1rem;
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dividerLine {
+    max-width: 100px;
+  }
+} 

@@ -47,6 +47,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Add sidebar collation for Collection section
+          sidebarCollapsible: true,
+          sidebarCollapsed: false,
         },
         blog: {
           showReadingTime: true,
@@ -84,9 +87,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'collectionSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Collection',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'aiWithUpSidebar',
+            position: 'left',
+            label: 'AI with 🆙',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -103,8 +112,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Collection',
+                to: '/docs/collection',
+              },
+              {
+                label: 'AI with 🆙',
+                to: '/docs/AI with 🆙',
               },
             ],
           },
