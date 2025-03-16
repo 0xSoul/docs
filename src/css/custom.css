@@ -1,0 +1,81 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Import SF Pro font */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-font-family-base: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ifm-heading-font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ifm-color-primary: #AF54FF;
+  --ifm-color-primary-dark: #A03BFF;
+  --ifm-color-primary-darker: #9422FF;
+  --ifm-color-primary-darkest: #7400E3;
+  --ifm-color-primary-light: #BE6DFF;
+  --ifm-color-primary-lighter: #CA86FF;
+  --ifm-color-primary-lightest: #E0B9FF;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(175, 84, 255, 0.1);
+  --ifm-background-color: #FFFFFF;
+  --ifm-text-color: #3C3C40;
+  --ifm-secondary-text-color: rgba(60, 60, 64, 0.75);
+  --ifm-tertiary-text-color: rgba(60, 60, 64, 0.4);
+  --ifm-button-background: #AF54FF;
+  --ifm-button-color: #FFFFFF;
+  --ifm-card-background: #F5F5F7;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #AF54FF;
+  --ifm-color-primary-dark: #A03BFF;
+  --ifm-color-primary-darker: #9422FF;
+  --ifm-color-primary-darkest: #7400E3;
+  --ifm-color-primary-light: #BE6DFF;
+  --ifm-color-primary-lighter: #CA86FF;
+  --ifm-color-primary-lightest: #E0B9FF;
+  --docusaurus-highlighted-code-line-bg: rgba(175, 84, 255, 0.3);
+  --ifm-background-color: #020014;
+  --ifm-text-color: #EDD9FF;
+  --ifm-secondary-text-color: rgba(237, 217, 255, 0.75);
+  --ifm-tertiary-text-color: rgba(237, 217, 255, 0.4);
+  --ifm-button-background: #AF54FF;
+  --ifm-button-color: #FFFFFF;
+  --ifm-card-background: #3C3C40;
+}
+
+/* Apply custom variables to relevant elements */
+body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+  font-family: var(--ifm-font-family-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+}
+
+.button, 
+.button--primary {
+  background-color: var(--ifm-button-background);
+  color: var(--ifm-button-color);
+  font-family: var(--ifm-font-family-base);
+  font-weight: 500;
+}
+
+.card {
+  background-color: var(--ifm-card-background);
+}
+
+.secondary-text {
+  color: var(--ifm-secondary-text-color);
+}
+
+.tertiary-text {
+  color: var(--ifm-tertiary-text-color);
+}

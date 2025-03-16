@@ -1,0 +1,640 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* Base styles to keep compatibility */
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* General Layout */
+:root {
+  --card-color: var(--ifm-color-primary);
+}
+
+/* Subtle Animated Background Elements */
+.backgroundElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.5; /* Reduced opacity for documentation focus */
+}
+
+.floatingOrb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--ifm-color-primary-lightest) 0%, transparent 70%);
+  opacity: 0.3;
+  filter: blur(20px);
+  animation: pulse 8s infinite ease-in-out;
+}
+
+.floatingRing {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 15px solid var(--ifm-color-primary-lightest);
+  opacity: 0.15;
+  transform: rotate(-25deg);
+  animation: rotateRing 20s infinite linear;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(-25deg); }
+  100% { transform: rotate(335deg); }
+}
+
+/* Hero Section - Documentation Focused */
+.heroSectionWrapper {
+  position: relative;
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  overflow: hidden;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.centeredLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logoAndTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heroLogo {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 15px rgba(175, 84, 255, 0.5));
+  animation: logoPulse 3s infinite ease-in-out;
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); filter: drop-shadow(0 4px 10px rgba(175, 84, 255, 0.3)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 4px 20px rgba(175, 84, 255, 0.6)); }
+  100% { transform: scale(1); filter: drop-shadow(0 4px 10px rgba(175, 84, 255, 0.3)); }
+}
+
+.heroText {
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-secondary-text-color);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchContainer {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--ifm-card-background);
+  color: var(--ifm-text-color);
+  outline: none;
+  font-family: var(--ifm-font-family-base);
+}
+
+.searchInput::placeholder {
+  color: var(--ifm-secondary-text-color);
+}
+
+.searchButton {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Documentation Categories */
+.docCategories {
+  padding: 4rem 0;
+  background-color: var(--ifm-card-background);
+}
+
+.categoriesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.categoryCard {
+  background-color: var(--ifm-background-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--ifm-text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--card-color);
+  overflow: hidden;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--ifm-text-color);
+}
+
+.categoryIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.categoryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.categoryDescription {
+  color: var(--ifm-secondary-text-color);
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
+}
+
+.categoryArrow {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary);
+  transition: transform 0.2s ease;
+}
+
+.categoryCard:hover .categoryArrow {
+  transform: translateX(5px);
+}
+
+/* Features Highlights */
+.featuresHighlights {
+  padding: 5rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.featuresContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 3rem;
+}
+
+.featuresContent {
+  flex: 1;
+}
+
+.featuresTitle {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featuresList li {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.featuresList li h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.featuresList li p {
+  margin: 0;
+  color: var(--ifm-secondary-text-color);
+}
+
+.productImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productShowcase {
+  width: 100%;
+  background-color: var(--ifm-card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.showcaseHeader {
+  background-color: var(--ifm-color-primary-darkest);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.showcaseDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.showcaseDot:nth-child(1) {
+  background-color: #ff5f57;
+}
+
+.showcaseDot:nth-child(2) {
+  background-color: #febc2e;
+}
+
+.showcaseDot:nth-child(3) {
+  background-color: #28c840;
+}
+
+.showcaseTitle {
+  margin-left: 10px;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.showcaseContent {
+  padding: 2rem;
+}
+
+.productPlaceholder {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productGraphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.productIcon {
+  margin-bottom: 1.5rem;
+  animation: gentleFloat 5s infinite ease-in-out;
+}
+
+.placeholderText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.placeholderSubtext {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+/* Documentation Path */
+.docPath {
+  padding: 5rem 0;
+  background-color: var(--ifm-card-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.docPathContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.docPathTitle {
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.journeySteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.journeyStep {
+  background-color: var(--ifm-background-color);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  width: 30%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.stepNumber {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 auto 1rem;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.stepDescription {
+  color: var(--ifm-secondary-text-color);
+  margin-bottom: 1.25rem;
+}
+
+.stepLink {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.stepLink:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.journeyConnector {
+  flex-grow: 1;
+  height: 3px;
+  background: linear-gradient(to right, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
+  position: relative;
+  z-index: 0;
+  max-width: 5%;
+}
+
+/* GitHub CTA */
+.githubCTA {
+  position: relative;
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary-darker));
+  overflow: hidden;
+}
+
+.githubContent {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.orbitAnimation {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-right: 4rem;
+}
+
+.planet {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, var(--ifm-color-primary-lightest), var(--ifm-color-primary-dark));
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px 10px rgba(175, 84, 255, 0.3);
+}
+
+.orbit {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 20s infinite linear;
+}
+
+.satellite {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.ctaText {
+  flex: 1;
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ctaText p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .featuresContainer {
+    flex-direction: column;
+  }
+  
+  .journeySteps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .journeyStep {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .journeyConnector {
+    width: 3px;
+    height: 40px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .githubContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .orbitAnimation {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .ctaText p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ctaButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  
+  .featuresTitle, .docPathTitle, .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .categoriesContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .featuresList li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .featureIcon {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+}
